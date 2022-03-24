@@ -26,4 +26,22 @@ function timeColorCode() {
 
 timeColorCode();
 
-console.log($("#09").val());//works!
+$('#09').val(localStorage.getItem('btn9'))
+
+
+$('#1').on("click", function() {
+    toStore = $('#09').val();
+    console.log(toStore);
+    localStorage.setItem("btn9", JSON.stringify(toStore))
+});
+
+// scheduleList = ["","","","","","","",""]
+
+// var saveBtn = $('.saveBtn');
+// console.log(saveBtn);
+
+// saveBtn.on('click', function() {
+//     var toStore = Event.target;
+//     // siblings().attr("id").val();
+//     console.log(toStore);
+// });
